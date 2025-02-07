@@ -62,37 +62,68 @@ public class ArrayTask1 {
 //			System.out.println(result);
 //		}
 		
-		// 5개 정수를 입력해주세요
-		String message = "5개 정수를 입력해주세요";
-		int num1 = 0, num2 = 0, num3 = 0, num4 = 0, num5 = 0;
+//		char[] arData6 = new char[5];
+//		for(int i = 0; i < arData6.length; i++) {
+//			arData6[i] = (char)(i > 1 ? 65 + i + 1 : 65 + i);
+//			System.out.print(arData6[i]);
+//		}
 		
+//		30분
+//		골드
+//		5개의 정수를 입력받고 배열에 담은 후 최댓값과 최솟값을 출력하기
+//		int[] arData7 = new int[5];
+//		int min = 0, max = 0;
+//		Scanner sc = new Scanner(System.in);
+//		String message = "5개의 정수를 입력하세요", exampleMessage = "1 3 5 7 9";
+//		
+//		System.out.println(message);
+//		System.out.println(exampleMessage);
+//		
+//		for(int i = 0; i < arData7.length; i++) {
+//			arData7[i] = sc.nextInt();
+//		}
+//
+//		min = arData7[0];
+//		max = arData7[0];
+//		
+//		for(int i = 1; i < arData7.length; i++) {
+//			if(max < arData7[i]) { max = arData7[i]; };
+//			if(min > arData7[i]) { min = arData7[i]; };
+//		}
+//		
+//		System.out.println("최솟값 : " + min + "\n최댓값 : " + max);
+		
+//		다이아
+//		사용자가 입력할 정수의 개수만큼 배열을 만든 후 정수를 입력받고 평균값을 구하기
 		Scanner sc = new Scanner(System.in);
-		System.out.println(message);
-		num1 = sc.nextInt();
-		num2 = sc.nextInt();
-		num3 = sc.nextInt();
-		num4 = sc.nextInt();
-		num5 = sc.nextInt();
+		int[] arData = null;
+		int length = 0, total = 0;
+		double average = 0.0;
+		String message1 = "정수의 개수: ", message2 = "입력한 모든 정수 :", message3 = "평균 : ";
 		
-		int[] arr7 = new int[5];
-		int result1 = 0, result2 = 0;
-
-		for(int i=0;i<arr7.length;i++) {
-			arr7[0] = num1;
-			arr7[1] = num2;
-			arr7[2] = num3;
-			arr7[3] = num4;
-			arr7[4] = num5;
-			if(arr7[i] > result1) {
-				result1 = arr7[i];
-			}
-			if(arr7[i] < result2) {
-				result2 = arr7[i];
-			}
+		System.out.println(message1);
+		length = sc.nextInt();
+		arData = new int[length];
+		
+		for(int i = 0; i < arData.length; i++) {
+			System.out.println(i + 1 + "번째 정수: ");
+			arData[i] = sc.nextInt();
 		}
-		System.out.println("최댓값 " + result1);
-		System.out.println("최솟값 " + result2);
+		
+		for(int i = 0; i < arData.length; i++) {
+			total += arData[i];
+		}
+		
+		average = (double)total / length;
 
+		System.out.println(message2);
+		for(int i = 0; i < arData.length; i++) {
+			System.out.println("[" + (i + 1) + "번 째 정수: " + arData[i] + "]" );
+		}
+		System.out.println(message3 + average);
+		
+		
+		
 		
 		
 	}

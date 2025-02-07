@@ -11,8 +11,8 @@ public class ForTask1 {
 //			System.out.println(i + 1);
 //		}
 //      100~1까지 출력하기
-//		for(int i=100;i>0;i--) {
-//			System.out.println(i);
+//		for(int i = 0; i<100; i++) {
+//			System.out.println(100 - i);
 //		}
 	
 //      1~100까지 중 짝수만 출력하기
@@ -45,9 +45,10 @@ public class ForTask1 {
 		
 //      플레티넘
 //      A~F까지 출력하기
-//		char a = 'A'; //a가 65라는 뜻
-//		for(int i=0;i<6;i++) {
-//			System.out.print((char)(a + i));
+		// A = 66
+//		char a = 'A';
+//		for(int i = 0; i<5; i++) {
+//			System.out.println((char)(i+65));
 //		}
 
 //      A~F까지 중 C를 제외하고 출력하기
@@ -64,13 +65,13 @@ public class ForTask1 {
 //			}
 //		}
 //      aBcDeF...Z까지 출력하기
-		for(int i=0;i<26;i++) {
-			if(i % 2 == 0) {
-				System.out.print((char)(i+97));
-			}else if(i % 2 != 0) {
-				System.out.print((char)(i+65));
-			}
-		}
+//		for(int i=0;i<26;i++) {
+//			if(i % 2 == 0) {
+//				System.out.print((char)(i+97));
+//			}else if(i % 2 != 0) {
+//				System.out.print((char)(i+65));
+//			}
+//		}
 		
 
 		
