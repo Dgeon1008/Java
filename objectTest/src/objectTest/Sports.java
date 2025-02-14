@@ -1,5 +1,7 @@
 package objectTest;
 
+import java.util.Objects;
+
 public class Sports {
 //	1. 기본 생성자
 //	2. 초기화 생성자
@@ -45,6 +47,25 @@ public class Sports {
 	public String toString() {
 		return "Sports [type=" + type + ", total=" + total + "]";
 	}
+	
+//	alt + shift + s -> h
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(total, type);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Sports other = (Sports) obj;
+		return total == other.total && Objects.equals(type, other.type);
+	}
 
 	public static void main(String[] args) {
 		Sports sports = new Sports();
@@ -52,6 +73,7 @@ public class Sports {
 		System.out.println(sports.toString());
 //		sports.equals(sports);
 	}
+
 }
 
 
