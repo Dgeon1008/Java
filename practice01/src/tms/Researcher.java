@@ -4,14 +4,25 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Researcher extends Person{
-	String[] lotto;
-	String search;
+	private long id;
+	private String[] lotto;
+	private String search;
 	
 	public Researcher() {;}
 
-	public Researcher(long id, String name, int age, String call, String job, String search) {
-		super(id, name, age, call, job);
+	public Researcher(long id, String[] lotto, String search) {
+		super();
+		this.id = id;
+		this.lotto = lotto;
 		this.search = search;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public String[] getLotto() {
@@ -32,51 +43,43 @@ public class Researcher extends Person{
 
 	@Override
 	public String toString() {
-		return "Researcher [lotto=" + Arrays.toString(lotto) + ", search=" + search + "]";
+		return "Researcher [id=" + id + ", lotto=" + Arrays.toString(lotto) + ", search=" + search + "]";
 	}
 
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = super.hashCode();
-		result = prime * result + Arrays.hashCode(lotto);
-		result = prime * result + Objects.hash(search);
-		return result;
+		return Objects.hash(id);
 	}
 
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (!super.equals(obj))
+		if (obj == null)
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
 		Researcher other = (Researcher) obj;
-		return Arrays.equals(lotto, other.lotto) && Objects.equals(search, other.search);
+		return id == other.id;
 	}
 	
 	public void work() {
 		System.out.println("연구원은 " + search + "중이다.");
 	}
 	
-	public void investLab(boolean lucky) {
-		if(lucky) {
-			System.out.println("연구에 투자한다");
-		}else {
-			System.out.println("나에게 투자한다");
-		}
+	public void investLab() {
+		
 	}
-	   
-	public void buyFood(boolean lucky) {
-		if(lucky) {
-			System.out.println("지인에게 밥을 산다");
-		}else {
-			System.out.println("집에 쌀을 산다");
-		}
-	}
-
 	
+	public void buyFood() {
+		
+	}
 	
 	
 }
+
+
+
+
+
+

@@ -83,8 +83,13 @@ public class Person {
 	}
 	
 	public void work() {
-		System.out.println(job + " 하루종일 일을한다.");
+		System.out.println(job + "은 하루종일 일을한다.");
 	}
 	
-		
+	
 }
+
+
+
+
+

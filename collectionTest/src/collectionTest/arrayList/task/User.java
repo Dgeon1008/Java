@@ -3,11 +3,12 @@ package collectionTest.arrayList.task;
 import java.util.Objects;
 
 public class User {
+//	5분
 	private String id;
 	private String name;
 	private String password;
 	private String phone;
-
+	
 	public User() {;}
 
 	public User(String id, String name, String password, String phone) {
@@ -18,35 +19,35 @@ public class User {
 		this.phone = phone;
 	}
 
-	public String getId() {
+	String getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	void setId(String id) {
 		this.id = id;
 	}
 
-	public String getName() {
+	String getName() {
 		return name;
 	}
 
-	public void setName(String name) {
+	void setName(String name) {
 		this.name = name;
 	}
 
-	public String getPassword() {
+	String getPassword() {
 		return password;
 	}
 
-	public void setPassword(String password) {
+	void setPassword(String password) {
 		this.password = password;
 	}
 
-	public String getPhone() {
+	String getPhone() {
 		return phone;
 	}
 
-	public void setPhone(String phone) {
+	void setPhone(String phone) {
 		this.phone = phone;
 	}
 
@@ -71,7 +72,6 @@ public class User {
 		User other = (User) obj;
 		return Objects.equals(id, other.id);
 	}
-	
 	
 	
 }

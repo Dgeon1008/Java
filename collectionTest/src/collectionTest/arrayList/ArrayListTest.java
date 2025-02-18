@@ -1,7 +1,6 @@
 package collectionTest.arrayList;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 public class ArrayListTest<T extends Number> {
@@ -15,6 +14,7 @@ public class ArrayListTest<T extends Number> {
 	public static void main(String[] args) {
 		
 		ArrayList<Integer> datas = new ArrayList<Integer>();
+				
 		System.out.println(datas.size());
 		datas.add(10);
 		datas.add(20);
