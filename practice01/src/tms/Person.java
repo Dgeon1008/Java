@@ -6,16 +6,16 @@ public class Person {
 	private long id;
 	private String name;
 	private int age;
-	private String call;
+	private String phone;
 	private String job;
 	
 	public Person() {;}
 
-	public Person(long id, String name, int age, String call, String job) {
+	public Person(long id, String name, int age, String phone, String job) {
 		this.id = id;
 		this.name = name;
 		this.age = age;
-		this.call = call;
+		this.phone = phone;
 		this.job = job;
 	}
 
@@ -43,12 +43,12 @@ public class Person {
 		this.age = age;
 	}
 
-	public String getCall() {
-		return call;
+	public String getPhone() {
+		return phone;
 	}
 
-	public void setCall(String call) {
-		this.call = call;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 
 	public String getJob() {
@@ -61,12 +61,12 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Person [id=" + id + ", name=" + name + ", age=" + age + ", call=" + call + ", job=" + job + "]";
+		return "Person [id=" + id + ", name=" + name + ", age=" + age + ", phone=" + phone + ", job=" + job + "]";
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(age, call, id, job, name);
+		return Objects.hash(age, id, job, name, phone);
 	}
 
 	@Override
@@ -78,18 +78,13 @@ public class Person {
 		if (getClass() != obj.getClass())
 			return false;
 		Person other = (Person) obj;
-		return age == other.age && Objects.equals(call, other.call) && id == other.id && Objects.equals(job, other.job)
-				&& Objects.equals(name, other.name);
+		return age == other.age && id == other.id && Objects.equals(job, other.job) && Objects.equals(name, other.name)
+				&& Objects.equals(phone, other.phone);
 	}
 	
 	public void work() {
-		System.out.println(job + "은 하루종일 일을한다.");
+		System.out.println("일을 합니다.");
 	}
 	
 	
 }
-
-
-
-
-

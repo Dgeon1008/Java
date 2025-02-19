@@ -3,17 +3,15 @@ package tms;
 import java.util.Arrays;
 import java.util.Objects;
 
-public class Employee extends Person{
-	private long id; 
+public class Employee extends Person {
+	private long id;
 	private String[] lotto;
 	private String company;
 	
 	public Employee() {;}
 
-	public Employee(long id, String[] lotto, String company) {
-		super();
-		this.id = id;
-		this.lotto = lotto;
+	public Employee(long id, String name, int age, String phone, String job, String company) {
+		super(id, name, age, phone, job);
 		this.company = company;
 	}
 
@@ -66,22 +64,37 @@ public class Employee extends Person{
 		return id == other.id;
 	}
 
+	@Override
 	public void work() {
-		System.out.println(getJob() + "은 하루종일 일을한다.");
+		System.out.println(this.getJob() + "하루종일 일을한다.");
 	}
 	
-	public void byeCompany() {
-		
+	public void byeCompany(boolean lucky) {
+		if(lucky) {
+			System.out.println("직장을 그만둔다.");
+		}else {
+			System.out.println("다시 일한다.");
+		}
 	}
 	
-	public void saveMoney() {
-		
+	public void saveMoney(boolean lucky) {
+		if(lucky) {
+			System.out.println("전액을 저축한다.");
+		}else {
+			System.out.println("다시 돈 번다.");
+		}
 	}
-	
-	
 	
 	
 }
+
+
+
+
+
+
+
+
 
 
 
