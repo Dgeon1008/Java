@@ -1,4 +1,4 @@
-package fileTest;
+package fileTest2;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -14,15 +14,15 @@ public class FileTest {
 	
 	public static void main(String[] args) throws IOException {
 //		new FileWriter(경로, 이어쓰기 여부);
-//		try {
-//			BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("test.txt", true));
-//			bufferedWriter.write("김동건 !!");
-//			bufferedWriter.close();
-//			
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} 
+		try {
+			BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("test.txt", true));
+			bufferedWriter.write("김동건 !!");
+			bufferedWriter.close();
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
 		
 		BufferedReader bufferedReader = null;
 		
