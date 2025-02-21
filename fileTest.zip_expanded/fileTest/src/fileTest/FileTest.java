@@ -16,7 +16,7 @@ public class FileTest {
 //		new FileWriter(경로, 이어쓰기 여부);
 //		try {
 //			BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("test.txt", true));
-//			bufferedWriter.write("김세환 !!");
+//			bufferedWriter.write("김동건 !!");
 //			bufferedWriter.close();
 //			
 //		} catch (IOException e) {
